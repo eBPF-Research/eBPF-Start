@@ -29,7 +29,7 @@ build-go: build-bpf
 	mkdir -p bin
 	go build -o bin/ ./cmd/*
 
-run:
+run: build-go
 	source scripts/conf.sh && bash scripts/basic_test.sh
 
 clean:
